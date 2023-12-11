@@ -55,7 +55,7 @@ const syncRepository = async (files: any[], vaultId: string) => {
     // for each file, read the content
     // for each function in the file, create a document with the path+function name as the id and the function code as the data
     const documents = files
-        .filter((f) => f.path.endsWith(".py") || f.path.endsWith(".js") || f.path.endsWith(".ts") || f.path.endsWith(".jsx") || f.path.endsWith(".tsx") || f.path.endsWith(".md"))
+        .filter((f) => f.path.endsWith(".py") || f.path.endsWith(".js") || f.path.endsWith(".ts") || f.path.endsWith(".jsx") || f.path.endsWith(".tsx") || f.path.endsWith(".md") || f.path.endsWith(".cs"))
         .flatMap((f) => {
             // stupid mode, split file in chunks every 100 lines
             const code = f.content;
